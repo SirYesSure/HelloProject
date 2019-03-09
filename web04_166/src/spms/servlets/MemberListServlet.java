@@ -27,6 +27,8 @@ public class MemberListServlet extends GenericServlet{
 		String user = "psu";
 		String password = "psu";
 		
+		String str = "여기서 사건이 생기지";
+		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url, user, password);
