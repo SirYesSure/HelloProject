@@ -17,6 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(value = "/member/list")
 public class MemberListServlet extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1591928815947883690L;
+
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -91,7 +96,9 @@ public class MemberListServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		System.out.println("음 이런게 되던가?");
+		resp.sendRedirect("../index.jsp");
+		
 	}
 
 }

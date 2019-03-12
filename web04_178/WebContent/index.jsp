@@ -16,6 +16,10 @@
 	만약 이렇게 그냥 변경하고 풀을 하면? 변한게 없어서 그렇구나
 
 	잘되네? 내가 문제였구나
+	
+	<form action="./member/list" method="post">
+		<input type="submit" value="테스트">
+	</form>
 
 </body>
 </html>
