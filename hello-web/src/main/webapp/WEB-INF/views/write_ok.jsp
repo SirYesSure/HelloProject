@@ -9,6 +9,13 @@
 <body>
 
 	<h1>write ok..</h1>
+	
+	<ul>
+		<li>${articleVo.articleId}</li>
+		<li>${articleVo.author}</li>
+		<li>${articleVo.title}</li>
+		<li>${articleVo.content}</li>
+	</ul>
 
 </body>
 </html>

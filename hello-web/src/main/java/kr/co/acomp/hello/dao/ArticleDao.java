@@ -9,6 +9,7 @@ public class ArticleDao {
 
 	public void insertArticle(Article article) {
 		System.out.println("insert ok..");
+		System.out.println(article);
 	}
 	
 }
