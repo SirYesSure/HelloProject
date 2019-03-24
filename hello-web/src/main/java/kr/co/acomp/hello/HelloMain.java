@@ -19,7 +19,7 @@ public class HelloMain {
 		BbsService service = ctx.getBean("bbsService", BbsService.class);
 		
 //		int result = dao.addTwoNumber(5, 67);
-		service.registArticle(new Article());
+		service.insertArticle(new Article());
 		
 //		System.out.println(result);
 		

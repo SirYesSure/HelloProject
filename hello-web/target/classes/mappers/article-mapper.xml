@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mappers.article-mapper">
+
+	<insert id="insertArticle"
+			parameterType="kr.co.acomp.hello.vo.Article">
+		INSERT INTO ARTICLE (ARTICLE_ID, AUTHOR, TITLE, CONTENT)
+		VALUES (#{articleId}, #{author}, #{title}, #{content})
+	</insert>
+
+	<select id="selectArticleById" 
+			parameterType="string"
+			resultType="kr.co.acomp.hello.vo.Article">
+		select	article_id as articleId,
+				author,
+				title,
+				content
+		from	article
+		where	article_id = #{articleId}
+	</select>
+
+
+</mapper>

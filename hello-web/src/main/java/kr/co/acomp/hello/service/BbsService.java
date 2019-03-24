@@ -16,10 +16,18 @@ public class BbsService {
 //		this.articleDao = articleDao;
 //	}
 	
-	public void registArticle(Article article) {
+	public void insertArticle(Article article) {
 		
 		articleDao.insertArticle(article);
 		
 	}
+
+	public Article viewArticleDetail(String articleId) {
+		// TODO Auto-generated method stub
+		return this.articleDao.selectArticleById(articleId);
+	}
 	
+	public void testService() {
+		System.out.println("target invoked..");
+	}
 }
