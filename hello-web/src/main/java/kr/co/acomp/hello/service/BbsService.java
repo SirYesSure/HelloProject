@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.acomp.hello.dao.ArticleDao;
+import kr.co.acomp.hello.exception.BizException;
 import kr.co.acomp.hello.vo.Article;
 
 @Service
@@ -29,5 +30,6 @@ public class BbsService {
 	
 	public void testService() {
 		System.out.println("target invoked..");
+		throw new BizException("testService fail..");
 	}
 }

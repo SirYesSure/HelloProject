@@ -13,7 +13,7 @@
 	</context:component-scan>
 	<mvc:annotation-driven/>
 	
-<!-- 	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/> -->
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
 
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="104857600"/>
@@ -25,6 +25,19 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
-	
+	<mvc:interceptors>
+		<mvc:interceptor>
+		<mvc:mapping path="/bbs/**"/>
+		<mvc:mapping path="/event/**"/>
+			<bean id="measuringInterceptor" class="kr.co.acomp.hello.interceptor.MeasuringInterceptor"/>		
+		</mvc:interceptor>
+		<!-- <mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/index"/>
+			<mvc:exclude-mapping path="/regist"/>
+			<mvc:exclude-mapping path="/login"/>
+			<bean id="loginCheckInterceptor" class="kr.co.acomp.hello.interceptor.LoginCheckInterceptor"/>
+		</mvc:interceptor> -->
+	</mvc:interceptors>
 
 </beans>
